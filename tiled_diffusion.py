@@ -471,6 +471,7 @@ class MultiDiffusion(AbstractDiffusion):
         t_in: Tensor = args["timestep"]
         c_in: dict = args["c"]
         cond_or_uncond: List = args["cond_or_uncond"]
+        print(x_in.shape, t_in.shape, c_in.shape, cond_or_uncond)
 
         N, C, H, W = x_in.shape
 
