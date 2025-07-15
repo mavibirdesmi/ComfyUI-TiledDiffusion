@@ -471,8 +471,8 @@ class MultiDiffusion(AbstractDiffusion):
         t_in: Tensor = args["timestep"]
         c_in: dict = args["c"]
         cond_or_uncond: List = args["cond_or_uncond"]
-        print(x_in.shape, t_in.shape, c_in, cond_or_uncond)
-
+        print(x_in.shape, t_in.shape, cond_or_uncond)
+        print(self.tile_width, self.tile_height, self.tile_overlap)
         N, C, H, W = x_in.shape
 
         # comfyui can feed in a latent that's a different size cause of SetArea, so we'll refresh in that case.
